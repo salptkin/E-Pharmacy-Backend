@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import authRoutes from './src/routes/auth.js';
+import cartRoutes from './src/routes/cart.js';
 
 const app = express();
 
@@ -71,6 +72,7 @@ app.post('/api/mock-register', (req, res) => {
 
 // API Routes
 app.use('/api', authRoutes);
+app.use('/api', cartRoutes);
 
 // 404 handler
 app.use((req, res) => {
