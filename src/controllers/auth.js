@@ -5,12 +5,6 @@ import httpError from "../services/httpError.js";
 import ctrlWrapper from "../services/ctrlWrapper.js";
 
 const { JWT_SECRET } = process.env;
-
-// Debug: JWT_SECRET kontrolü
-console.log('JWT_SECRET:', JWT_SECRET ? 'SET' : 'NOT SET');
-console.log('JWT_SECRET length:', JWT_SECRET ? JWT_SECRET.length : 0);
-
-// Geçici çözüm: Eğer JWT_SECRET yoksa, default değer kullan
 const SECRET_KEY = JWT_SECRET || '719cfbca0dab365784e4d8e81e45ab1e0b92aefd70842cd1fc7b55d1e8cb1f6580107a3ff6d8699ef206a5bf3d67cc2d203cbd11950fb30c1796ce641ea4825a';
 
 const register = async (req, res) => {
