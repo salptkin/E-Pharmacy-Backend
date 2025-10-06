@@ -1,71 +1,71 @@
 # E-Pharmacy Backend API
 
-Modern e-eczane uygulaması için RESTful API backend.
+A RESTful API backend for a modern e-pharmacy application.
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- ✅ Kullanıcı kimlik doğrulama (JWT)
-- ✅ Sepet yönetimi
-- ✅ Ürün listeleme ve arama
-- ✅ Eczane listeleme
-- ✅ Müşteri yorumları
-- ✅ MongoDB veritabanı
+- ✅ User authentication (JWT)
+- ✅ Cart management
+- ✅ Product listing and search
+- ✅ Pharmacy listing
+- ✅ Customer reviews
+- ✅ MongoDB database integration
 
 ## 📋 API Endpoints
 
 ### Authentication
 
-- `POST /api/user/register` - Kullanıcı kaydı
-- `POST /api/user/login` - Kullanıcı girişi
-- `POST /api/user/logout` - Kullanıcı çıkışı
-- `GET /api/user/user-info` - Kullanıcı bilgileri
+- `POST /api/user/register` - User registration
+- `POST /api/user/login` - User login
+- `POST /api/user/logout` - User logout
+- `GET /api/user/user-info` - Get user information
 
-### Cart (Sepet)
+### Cart
 
-- `GET /api/cart` - Sepet içeriğini görüntüle
-- `PUT /api/cart/update` - Sepeti güncelle
-- `POST /api/cart/add` - Sepete ürün ekle
-- `PUT /api/cart/decrease` - Ürün miktarını azalt
-- `DELETE /api/cart/remove/:productId` - Ürünü sepetten sil
-- `POST /api/cart/checkout` - Satın alma işlemi
+- `GET /api/cart` - View cart contents
+- `PUT /api/cart/update` - Update cart
+- `POST /api/cart/add` - Add product to cart
+- `PUT /api/cart/decrease` - Decrease product quantity
+- `DELETE /api/cart/remove/:productId` - Remove product from cart
+- `POST /api/cart/checkout` - Checkout
 
-### Products (Ürünler)
+### Products
 
-- `GET /api/products` - Tüm ürünleri listele (pagination, filtreleme)
-- `GET /api/products/:id` - Ürün detayı
+- `GET /api/products` - List all products (with pagination & filtering)
+- `GET /api/products/:id` - Get product details
 
-### Stores (Eczaneler)
+### Stores
 
-- `GET /api/stores` - Tüm eczaneleri listele
-- `GET /api/stores/nearest` - En yakın eczaneleri listele
+- `GET /api/stores` - List all pharmacies
+- `GET /api/stores/nearest` - List nearest pharmacies
 
-### Reviews (Yorumlar)
+### Reviews
 
-- `GET /api/customer-reviews` - Müşteri yorumlarını getir
+- `GET /api/customer-reviews` - Get customer reviews
 
 ## 🛠️ Teknolojiler
 
 - **Node.js** - Runtime
 - **Express.js** - Web framework
-- **MongoDB** - Veritabanı
+- **MongoDB** - Database
 - **Mongoose** - ODM
 - **JWT** - Authentication
-- **Bcrypt** - Şifre hashleme
+- **Bcrypt** - Password hashing
 - **Joi** - Validation
 
 ## 🔧 Kurulum
 
 ```bash
-# Projeyi klonlayın
+# Clone the project
 git clone https://github.com/salptkin/E-Pharmacy-Backend.git
 
-# Klasöre girin
+# Navigate to the project directory
 cd E-Pharmacy-Backend
 
-# Bağımlılıkları yükleyin
+# Install dependencies
 npm install
 
-# .env dosyası oluşturun ve gerekli değişkenleri ekleyin
+# Create a .env file and add the required environment variables
 ```
 
 ## 📝 Environment Variables
@@ -93,11 +93,3 @@ npm run dev
 # Production
 npm start
 ```
-
-## 📦 Deployment
-
-Bu proje Render.com üzerinde deploy edilebilir.
-
-## 📄 Lisans
-
-ISC
