@@ -22,6 +22,13 @@ router.post(
   ctrl.cartCheckout
 );
 
+router.patch(
+  "/cart/add",
+  authenticate,
+  validateBody(schemas.addToCartSchema),
+  ctrl.addToCart
+);
+
 router.post(
   "/cart/add",
   authenticate,
